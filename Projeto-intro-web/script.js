@@ -20,7 +20,7 @@ const idade1 = 21
 const regiao1 = "demacia"
 const funcao1 = "suporte"
 const teveRework1 = false
-const arraySkin1 = ["guardia estelar" , " Dj sona"]
+const arraySkin = ["guardia estelar" , " Dj sona"]
 
 // console.log(` Nome: ${nomeMaiusculo1} \n Idade: ${idade1} \n Região: ${regiao1} \n Funcao: ${funcao1} \n Rework: ${teveRework1} \n Melhor skin: ${arraySkin1}`)
 
@@ -75,7 +75,7 @@ const media = (idade1 + idade2 + idade3)
 
 const personagens = [
     {
-        nome: "sona",
+        nome: "Sona",
         idade: 21,
         regiao: "demacia",
         funcao: "suporte",
@@ -84,7 +84,7 @@ const personagens = [
     },
 
     {
-        nome: "senna",
+        nome: "Senna",
         idade: 25,
         regiao: "runeterra",
         funcao: "atirador(a)",
@@ -93,7 +93,7 @@ const personagens = [
     },
 
     {
-        nome: "leBlanc",
+        nome: "LeBlanc",
         idade: 28,
         regiao: "noxus",
         funcao: "assassino(a)",
@@ -114,12 +114,33 @@ const personagens = [
 
 const arrayPersonagens = []
 
-if(personagens.teveRework1 === false && personagens.teveRework2 === false && personagens.teveRework3 === true){
-    arrayPersonagens.push(personagens)
-}else{
-    console.log(personagens, arrayPersonagens)
-    alert("está faltando um item")
+// (IF PURO - feito um condição, isso foi na força do odio sem o laço)
+
+// if(personagens[0].teveRework === true){
+//     arrayPersonagens.push(personagens[0])
+// }
+
+// if(personagens[1].teveRework === true) {
+//     arrayPersonagens.push(personagens[1])
+// }
+
+// if(personagens[2].teveRework === true) {
+//     arrayPersonagens.push(personagens[2])
+// }
+//  console.log(arrayPersonagens);
+
+// (Esse aqui foi feito de uma forma mais estruturada usando o laço)
+
+for (let i = 0; i < personagens.length; i++) {
+    if (personagens[i].teveRework === true) {
+        arrayPersonagens.push(personagens[i])
+    } else {
+        alert(`${personagens[i].nome} não foi adicionado`)
+    }
 }
+console.log(arrayPersonagens);
+
+
 
 // if (true) {
 //     if (teveRework1 === false) {
@@ -150,28 +171,37 @@ if(personagens.teveRework1 === false && personagens.teveRework2 === false && per
 // Cada item deve ser exibido a partir de uma iteração do laço. Para testar, adicione mais um item ao array de objetos, 
 // e verifique se ele é exibido corretamente.
 
-let arraysDosOjetos1 = ""
+let arraysDosOjetos1 = []
 
-for (let i = 0; i < arraySkin1.length; i++) {
-    arraysDosOjetos1 = arraysDosOjetos1 + ',' + arraySkin1[i]
+// for (let i = 0; i < arraySkin1.length; i++) {
+//     arraysDosOjetos1 = arraysDosOjetos1 + ',' + arraySkin1[i]
+// }
+// console.log(arraysDosOjetos1)
+
+
+// let arraysDosOjetos2 = ""
+
+// for (let i = 0; i < arraySkin2.length; i++) {
+//     arraysDosOjetos2 = arraysDosOjetos2 + ',' + arraySkin2[i]
+// }
+// console.log(arraysDosOjetos2)
+
+
+// let arraysDosOjetos3 = ""
+
+// for (let i = 0; i < arraySkin3.length; i++) {
+//     arraysDosOjetos3 = arraysDosOjetos3 + ',' + arraySkin3[i]
+// }
+// console.log(arraysDosOjetos3)
+
+for (let i = 0; i < arraySkin.length; i++) {
+    arraySkin[i].personagens
 }
 console.log(arraysDosOjetos1)
 
 
-let arraysDosOjetos2 = ""
-
-for (let i = 0; i < arraySkin2.length; i++) {
-    arraysDosOjetos2 = arraysDosOjetos2 + ',' + arraySkin2[i]
-}
-console.log(arraysDosOjetos2)
 
 
-let arraysDosOjetos3 = ""
-
-for (let i = 0; i < arraySkin3.length; i++) {
-    arraysDosOjetos3 = arraysDosOjetos3 + ',' + arraySkin3[i]
-}
-console.log(arraysDosOjetos3)
 
 
 // SEMANA 6- 
